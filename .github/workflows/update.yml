@@ -1,0 +1,32 @@
+name: 每日更新金價
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天台灣時間早上8點（UTC+0 的 0點）
+  workflow_dispatch:     # 手動觸發功能
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 下載程式碼
+        uses: actions/checkout@v3
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 安裝 requests 套件
+        run: pip install requests
+
+      - name: 執行金價更新程式
+        run: python gold_price.py
+
+      - name: 提交 JSON 更新結果
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@users.noreply.github.com'
+          git add Gold_price.json
+          git commit -m "每日自動更新金價 JSON" || echo "No changes"
+          git push
