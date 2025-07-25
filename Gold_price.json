@@ -1,3 +1,25 @@
 {
- "error": "No API Key provided"
+ "timestamp": 1753463284,
+ "metal": "XAU",
+ "currency": "USD",
+ "exchange": "FOREXCOM",
+ "symbol": "FOREXCOM:XAUUSD",
+ "prev_close_price": 3368.615,
+ "open_price": 3368.615,
+ "low_price": 3325.1,
+ "high_price": 3373.62,
+ "open_time": 1753401600,
+ "price": 3331.49,
+ "ch": -37.13,
+ "chp": -1.1,
+ "ask": 3331.88,
+ "bid": 3330.98,
+ "price_gram_24k": 107.1099,
+ "price_gram_22k": 98.1841,
+ "price_gram_21k": 93.7212,
+ "price_gram_20k": 89.2582,
+ "price_gram_18k": 80.3324,
+ "price_gram_16k": 71.4066,
+ "price_gram_14k": 62.4808,
+ "price_gram_10k": 44.6291
 }
