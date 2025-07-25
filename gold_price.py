@@ -1,6 +1,6 @@
 import requests
 import json
-
+import os
 
 
 Gold_API_url = "https://www.goldapi.io/api/XAU/USD"
